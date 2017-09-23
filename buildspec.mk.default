@@ -112,3 +112,8 @@ endif
 # changes (see buildspec.mk.default), update this to the new value from
 # buildspec.mk.default.
 BUILD_ENV_SEQUENCE_NUMBER := 13
+
+# Setup gclib switch for PC builds 
+ifndef PC_BUILD
+CROSS_COMPILE := $(abspath prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6/bin)/x86_64-linux-
+endif
